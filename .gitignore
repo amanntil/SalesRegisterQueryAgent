@@ -1,0 +1,22 @@
+# Python virtual env
+myenv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+myenv/
+
+# Excel + Data files (sensitive!)
+helper/Dummy_Sales_Register.xlsx
+Dummy_Sales_Register.xlsx
+Data/
+*.xlsx
+*.csv
+*.json
+*.log
+
+# OS generated
+.DS_Store
+Thumbs.db

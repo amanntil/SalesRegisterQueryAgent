@@ -1,0 +1,8 @@
+pandas 
+openpyxl 
+psycopg2-binary 
+pgvector 
+sentence-transformers 
+numpy 
+sqlalchemy
+"psycopg[binary]"

@@ -89,7 +89,7 @@ def extract_complete_db(db_params=None):
     
     print("Extracting DATA...")
     
-    # 4. DYNAMIC EXTRACTION - ✅ BUILDS QUERY FROM ACTUAL COLUMNS
+    # 4. DYNAMIC EXTRACTION - BUILDS QUERY FROM ACTUAL COLUMNS
     for table_info in master_summary['schema']['tables']:
         schema_name, table_name = table_info['schema'], table_info['name']
         table_key = f"{schema_name}.{table_name}"
@@ -100,7 +100,7 @@ def extract_complete_db(db_params=None):
             print(f"  Extracting {table_key} ({row_count:,} rows)...")
             
             try:
-                # ✅ DYNAMIC: Build SELECT with ALL actual columns cast to TEXT
+                # DYNAMIC: Build SELECT with ALL actual columns cast to TEXT
                 col_selects = []
                 for col_name in columns:
                     if 'embedding' in col_name.lower():

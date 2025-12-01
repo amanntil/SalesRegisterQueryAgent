@@ -97,7 +97,7 @@ def store_to_postgres(df, db_params=None):
         );
     """)
     
-    # ✅ DYNAMIC: Count exactly what's needed
+    #DYNAMIC: Count exactly what's needed
     columns = ['Doc Type', 'Invoice No.', 'Invoice Date', 'Party Name', 'PartyCode', 
               'Industry Name', 'Ref No', 'ItemCode', 'Item Name', 'Revenue Account',
               'Item Group', 'U_ItemGrName', 'Additional Desc', 'Quantity', 'Price',
@@ -130,7 +130,7 @@ def store_to_postgres(df, db_params=None):
         row_data += (row['item_embedding'].tolist(), row['manufacturer_embedding'].tolist())
         values.append(row_data)
     
-    # ✅ EXACTLY 37 placeholders (manually counted)
+    # EXACTLY 37 placeholders (manually counted)
     placeholders = ','.join(['%s'] * len(table_columns))
     insert_sql = f"""
         INSERT INTO sales_register ({','.join(table_columns)}) 
